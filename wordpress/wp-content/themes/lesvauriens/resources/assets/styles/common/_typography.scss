@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+SC:500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap');
+
+
+h1, h2
+{
+	font-family: 'Alegreya SC', serif;
+	font-weight: 700;
+	color: $red;
+}
+
+p
+{
+	font-family: 'Arvo', serif;
+	color: $dark-blue;
+	margin: 0;
+}
+
+
+h2
+{
+	font-size: 40px;
+}
+
+h3
+{
+	font-family: 'Arvo', serif;
+	font-size: 19px;
+	font-weight: 700;
+	color: $red;
+}

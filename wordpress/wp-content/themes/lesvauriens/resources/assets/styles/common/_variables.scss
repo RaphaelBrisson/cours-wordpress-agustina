@@ -1,0 +1,19 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #F72C3F
+);
+
+//COLORS
+$white: #FAFAFA;
+$red: #F72C3F;
+$dark-blue: #131637;
+
+//FONT WEIGHT
+$regular: 400;
+$bold: 700;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

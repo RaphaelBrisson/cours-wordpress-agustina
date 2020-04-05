@@ -1,0 +1,42 @@
+.nav-primary
+{
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	background: $white;
+	box-shadow: 0px 2px 15px #0000001C;
+	padding-bottom: 10px;
+	padding-top: 4px;
+
+	div ul
+	{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		li a
+		{
+			color: $dark-blue;
+		}
+	}
+}
+
+.banner .nav a
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.banner
+{
+	position: relative;
+
+	.logo-top-left
+	{
+		position: fixed;
+		z-index: 1000;
+		top: 40px;
+		left: 30px;
+		width: 60px;
+	}
+}
