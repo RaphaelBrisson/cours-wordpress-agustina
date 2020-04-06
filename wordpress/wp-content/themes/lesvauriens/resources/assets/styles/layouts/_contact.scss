@@ -99,3 +99,47 @@
 		}
 	}
 }
+
+
+
+
+@media all and (max-width: 768px)
+{
+	#contact
+	{
+		&>p:first-of-type
+		{
+			width: 80%;
+		}
+	}
+}
+
+
+@media all and (max-width: 480px)
+{
+	#contact
+	{	
+		.contact-data
+		{
+			flex-direction: column;
+
+			&>div:first-of-type
+			{
+				padding-top: 30px;
+				width: 100%;
+				display: flex;
+
+				div>*
+				{
+					padding-bottom: 30px;
+				}
+			}
+			
+			&>div:last-of-type
+			{
+				padding-top: 60px;
+				width: 100%;
+			}
+		}
+	}
+}

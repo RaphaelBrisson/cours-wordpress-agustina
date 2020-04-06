@@ -21,7 +21,7 @@
         </div>
         <div>
           <p><a href="mailto:lesvauriens@yahoo.fr">lesvauriens@yahoo.fr</a></p>
-          <p><a href="tel:06  07597861">06 07 59 78 61</a></p>
+          <p><a href="tel:0607597861">06 07 59 78 61</a></p>
           <p>01150, Vaux-en-Bugey</p>
         </div>
       </div>

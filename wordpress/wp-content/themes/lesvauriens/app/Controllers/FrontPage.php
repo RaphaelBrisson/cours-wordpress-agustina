@@ -9,7 +9,7 @@ class FrontPage extends Controller
 	public function articles()
     {
         $args = array(
-            'numberposts' => 8,
+            'numberposts' => 6,
             'post_type' => 'post',
             // 'orderby' => 'meta_value',
             // 'meta_key' => 'date_evenement',

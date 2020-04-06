@@ -2,6 +2,7 @@ export default {
 	init() {
 	// JavaScript to be fired on the home page
 	this.smoothScroll();
+	this.responsiveMenu();
 	},
 
 	smoothScroll () {
@@ -23,6 +24,22 @@ export default {
 	  $('.h2 span').animate({'width':'100%'}, 1000);
 
 	  });
+	},
+
+	responsiveMenu () {
+		$('.hamburger').click(function() 
+		{
+			if($(this).hasClass('is-active') == false) 
+			{
+				$(this).toggleClass('is-active');
+				$('.banner .nav').css('display', 'flex');
+			}
+			else
+			{
+				$(this).toggleClass('is-active');
+				$('.banner .nav').css('display', 'none');
+			}
+		});
 	},
 
 	finalize() {

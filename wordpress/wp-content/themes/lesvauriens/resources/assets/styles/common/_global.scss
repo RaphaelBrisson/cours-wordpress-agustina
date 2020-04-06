@@ -31,3 +31,13 @@ section
 		display: inline-block;
 	}
 }
+
+
+@media all and (max-width: 480px)
+{
+	.h2
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}

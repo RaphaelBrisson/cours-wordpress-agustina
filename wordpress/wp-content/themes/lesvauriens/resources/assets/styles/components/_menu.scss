@@ -40,3 +40,52 @@
 		width: 60px;
 	}
 }
+
+
+.hamburger
+{
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	top: 40px;
+	right: 30px;
+	transform: scale(0.8);
+}
+
+
+@media all and (max-width: 980px)
+{
+	.nav-primary
+	{
+		padding-bottom: 0px;
+		padding-top: 0px;
+		min-height: 50px;
+	}
+
+	.banner .nav
+	{
+		display: none;
+		padding-top: 50px;
+		padding-bottom: 5px;
+	}
+	.hamburger
+	{
+		display: block;
+	}
+}
+
+
+@media all and (max-width: 480px)
+{
+	.banner .nav
+	{
+		display: none;
+		text-align: center;
+		flex-direction: column;
+
+		a
+		{
+			padding-top: 10px;
+		}
+	}
+}

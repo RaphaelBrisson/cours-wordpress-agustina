@@ -9,11 +9,14 @@
       <h1><?php echo($blog_title) ?></h1>
       <img src="@asset('images/logo.png')" alt="">
       <p class="slogan">Une âme, un état d'esprit, de la convivialité !</p>
-      <p>Association multi-activités : ludiques, sportives, semi-culturelles… partagées dans un esprit de convivialit).<br>Association de lien social, destinée principalement aux habitants de Vaux-en-Bugey.<br>Notre slogan : « Une âme, un état d’esprit, de la convivialité !! »</p>
-      <p>{{ get_field('description_accueil') }}</p>
-      <svg xmlns="http://www.w3.org/2000/svg" width="36.132" height="17.006" viewBox="0 0 36.132 17.006">
+
+      <!-- Description de l'association (formatage automatique avec ACF (pour <p> et <br>)) -->
+      {{ the_field('description_accueil') }}
+
+
+      <a href="#actualites"><svg xmlns="http://www.w3.org/2000/svg" width="36.132" height="17.006" viewBox="0 0 36.132 17.006">
         <path id="Tracé_2" data-name="Tracé 2" d="M0,0,17.658,13.895,34.241,0" transform="translate(0.928 1.179)" fill="none" stroke="#F72C3F" stroke-width="3"/>
-      </svg>
+      </svg></a>
     </div>
 </section> 
   
@@ -32,10 +35,11 @@
           <div class="entry-summary">
             {{ get_the_excerpt($post->ID) }}
           </div>
-          <p class="see-more"><a href="{{ get_permalink($post->ID) }}">Voir l'article</a></p>
+          <p class="see-more-big"><a href="{{ get_permalink($post->ID) }}">Voir l'article</a></p>
         </div>
         <div>
           <img src="{{ get_the_post_thumbnail_url($post->ID, 'medium') }}" alt="">
+          <p class="see-more-small"><a href="{{ get_permalink($post->ID) }}">Voir l'article</a></p>
         </div>
       </article>
     @endforeach
@@ -67,5 +71,4 @@
 
   </div>
 </section>
-{!! get_the_posts_navigation() !!}
 @endsection

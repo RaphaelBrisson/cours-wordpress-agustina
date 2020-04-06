@@ -7,5 +7,10 @@
       @endif
     </nav>
   </div>
-  <img class="logo-top-left" src="@asset('images/logo2.png')"alt="logo-small">
+  <button class="hamburger hamburger--spin" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <a href="<?= get_home_url() ?>"><img class="logo-top-left" src="@asset('images/logo2.png')"alt="logo-small"></a>
 </header>

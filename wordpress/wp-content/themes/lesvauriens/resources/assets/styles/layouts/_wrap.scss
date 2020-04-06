@@ -35,15 +35,27 @@ section
 		padding-left: 50px;
 		padding-right: 50px;
 	}
+
+	.wrap2
+	{
+		max-width: 100%;
+		padding-left: 150px;
+		padding-right: 150px;
+	}
 }
 
 @media all and (max-width: 980px)
 {
 	.wrap
 	{
-		max-width: 100%;
 		padding-left: 35px;
 		padding-right: 35px;
+	}
+
+	.wrap2
+	{
+		padding-left: 100px;
+		padding-right: 100px;
 	}
 }
 
@@ -51,15 +63,26 @@ section
 {
 	.wrap
 	{
-		max-width: 100%;
 		padding-left: 25px;
 		padding-right: 25px;
+	}
+
+	.wrap2
+	{
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 }
 
 @media all and (max-width: 480px)
 {
 	.wrap
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.wrap2
 	{
 		padding-left: 10px;
 		padding-right: 10px;
