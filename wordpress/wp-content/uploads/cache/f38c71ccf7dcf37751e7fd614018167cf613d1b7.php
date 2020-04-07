@@ -46,7 +46,7 @@
   </div>
   
   <div>
-    <p class="display-more"><a href="<?= get_post_type_archive_link('post') ?>">AFFICHER PLUS</a></p>
+    <p class="display-more"><a href="<?= get_post_type_archive_link('post') ?>">TOUS LES ARTICLES</a></p>
   </div>
 </section>
 

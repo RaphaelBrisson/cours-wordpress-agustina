@@ -4,10 +4,11 @@
   @include('partials.page-header')
 
   @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-    <a href="/">Revenir à l'accueil</a>
+  <div class="404-page">
+    <h1>
+      {{ __('La page n’existe pas :/', 'sage') }}
+    </h1>
+    <a href="<?= get_home_url() ?>">Revenir à l'accueil</a>
+  </div>
   @endif
 @endsection

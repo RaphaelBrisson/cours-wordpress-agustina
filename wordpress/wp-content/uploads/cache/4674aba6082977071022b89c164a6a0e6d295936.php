@@ -1,18 +1,21 @@
 <?php $__env->startSection('content'); ?>
-  <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!--   <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
 
   <?php if(!have_posts()): ?>
     <div class="alert alert-warning">
-      <?php echo e(__('Sorry, no results were found.', 'sage')); ?>
+      <?php echo e(__('Aucun résultat trouvé :(', 'sage')); ?>
 
     </div>
-    <?php echo get_search_form(false); ?>
-
   <?php endif; ?>
 
-  <?= get_search_form() ?>
-
   <section id="all-posts" class="wrap">
+
+    <div class="h2">
+      <h1>Tous nos articles</h1>
+    </div>
+
+    <?= get_search_form() ?>
+
     <div class="articles-container">
       <?php while(have_posts()): ?> <?php the_post() ?>
       <article>
@@ -22,8 +25,6 @@
             <?php echo e(get_the_excerpt($post->ID)); ?>
 
           </div>
-          
-
         </div>
         <div>
           <img src="<?php echo e(get_the_post_thumbnail_url($post->ID, 'medium')); ?>" alt="">
@@ -32,13 +33,11 @@
       </article>
       <?php endwhile; ?>
     </div>
+
+    <?php echo get_the_posts_pagination(); ?>
+
+
   </section>
-
-
-  <?php echo get_the_posts_navigation(); ?>
-
-  <?php echo get_the_posts_pagination(); ?>
-
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layouts.app2', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

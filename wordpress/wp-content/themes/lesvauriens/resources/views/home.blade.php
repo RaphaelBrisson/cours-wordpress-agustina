@@ -1,18 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
-  @include('partials.page-header')
+<!--   @include('partials.page-header') -->
 
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
+      {{ __('Aucun résultat trouvé :(', 'sage') }}
     </div>
-    {!! get_search_form(false) !!}
   @endif
 
-  <?= get_search_form() ?>
-
   <section id="all-posts" class="wrap">
+
+    <div class="h2">
+      <h1>Tous nos articles</h1>
+    </div>
+
+    <?= get_search_form() ?>
+
     <div class="articles-container">
       @while (have_posts()) @php the_post() @endphp
       <article>
@@ -21,8 +25,6 @@
           <div class="entry-summary">
             {{ get_the_excerpt($post->ID) }}
           </div>
-          
-
         </div>
         <div>
           <img src="{{ get_the_post_thumbnail_url($post->ID, 'medium') }}" alt="">
@@ -31,9 +33,8 @@
       </article>
       @endwhile
     </div>
+
+    {!! get_the_posts_pagination() !!}
+
   </section>
-
-
-  {!! get_the_posts_navigation() !!}
-  {!! get_the_posts_pagination() !!}
 @endsection

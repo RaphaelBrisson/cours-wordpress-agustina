@@ -1,12 +1,4 @@
-<!-- <footer class="content-info">
-  <div class="container">
-    <?php dynamic_sidebar('sidebar-footer') ?>
-  </div>
-</footer>
- -->
-
-
- <footer id="contact" class="wrap">
+<footer id="contact" class="wrap">
     <div class="h2">
       <h2>Nous contacter</h2>
       <span></span>

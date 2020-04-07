@@ -14,19 +14,22 @@
 /** Import theme styles */
 @import "common/global";
 @import "common/typography";
+
 @import "components/buttons";
-@import "components/comments";
+// @import "components/comments";
 @import "components/forms";
 @import "components/menu";
 @import "components/wp-classes";
+
 @import "layouts/wrap";
-@import "layouts/header";
-@import "layouts/actualites";
-@import "layouts/evenements";
+@import "layouts/front-page/actualites";
+@import "layouts/front-page/evenements";
 @import "layouts/contact";
-@import "layouts/home_presentation";
+@import "layouts/front-page/home_presentation";
+@import "layouts/home/home";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/404";
 
 
 // A enlever (mis car probleme avec ACF)

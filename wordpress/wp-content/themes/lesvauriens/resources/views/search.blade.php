@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
-  @include('partials.page-header')
+<!--   @include('partials.page-header') -->
 
   @if (!have_posts())
     <div class="alert alert-warning">
@@ -9,9 +9,14 @@
     </div>
   @endif
   
-  <?= get_search_form() ?>
-
   <section id="all-posts" class="wrap">
+    
+    <div class="h2">
+      <h1>Résultats pour : <?= $_GET["s"] ?></h1>
+    </div>
+  
+    <?= get_search_form() ?>
+
     <div class="articles-container">
       @while (have_posts()) @php the_post() @endphp
       <article>
@@ -28,7 +33,12 @@
       </article>
       @endwhile
     </div>
-  </section>
 
-  {!! get_the_posts_navigation() !!}
+    {!! get_the_posts_pagination() !!}
+
+    <div>
+      <p class="display-more"><a href="<?= get_post_type_archive_link('post') ?>">TOUS LES ARTICLES</a></p>
+    </div>
+
+  </section>
 @endsection

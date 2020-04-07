@@ -7,6 +7,12 @@
 use Roots\Sage\Config;
 use Roots\Sage\Container;
 
+
+
+// Menu 2 
+register_nav_menu('secondary_navigation', 'Menu secondaire');
+
+
 /**
  * Helper function for prettying up errors
  * @param string $message

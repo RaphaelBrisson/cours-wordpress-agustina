@@ -1,8 +1,9 @@
 <header class="banner">
   <div class="container">
+
     <nav class="nav-primary wrap2">
-      <?php if(has_nav_menu('primary_navigation')): ?>
-        <?php echo wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']); ?>
+      <?php if(has_nav_menu('secondary_navigation')): ?>
+        <?php echo wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'nav2']); ?>
 
       <?php endif; ?>
     </nav>

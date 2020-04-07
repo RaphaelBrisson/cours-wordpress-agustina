@@ -1,0 +1,122 @@
+#home_presentation
+{
+	background-image: url('../images/photo_groupe.png');
+	background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	&>div
+	{
+		padding-top: 120px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		h1
+		{
+			font-weight: 500;
+			font-size: 60px;
+			text-align: center;
+		}
+
+		p
+		{
+			font-weight: $bold;
+			font-size: 15px;
+		}
+
+		.slogan
+		{
+			font-size: 36px;
+			letter-spacing: 1.5px;
+			font-family: 'Alegreya SC', serif;
+			padding-bottom: 30px;
+		}
+
+		p:last-of-type
+		{
+			padding-bottom: 80px;
+		}
+
+		img
+		{
+			width: 300px;
+			margin: auto;
+			padding: 60px 0;
+		}
+
+		svg
+		{
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: 0;
+		}
+	}
+	
+}
+
+.red_triangle
+{
+	position: absolute;
+	top: -45px;
+	left: 0;
+	width: 100%;
+}
+
+
+
+@media all and (max-width: 1170px)
+{
+
+}
+@media all and (max-width: 980px)
+{
+	#home_presentation
+	{
+		&>div
+		{
+			.slogan
+			{
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 768px)
+{
+
+}
+
+@media all and (max-width: 480px)
+{
+	#home_presentation
+	{
+		background-image: none;
+
+		&>div
+		{
+			h1
+			{
+				font-size: 50px;
+			}
+
+			img
+			{
+				width: 250px;
+			}
+
+			.slogan
+			{
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 320px)
+{
+
+}
