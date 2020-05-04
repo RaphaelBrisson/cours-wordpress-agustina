@@ -11,6 +11,8 @@ use Roots\Sage\Container;
 
 // Menu 2 
 register_nav_menu('secondary_navigation', 'Menu secondaire');
+// Menu 3
+register_nav_menu('single_navigation', 'Menu single');
 
 
 /**

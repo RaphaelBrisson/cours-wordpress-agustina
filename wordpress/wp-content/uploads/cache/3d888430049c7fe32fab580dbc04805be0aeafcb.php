@@ -2,7 +2,7 @@
   <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <?php if(!have_posts()): ?>
-  <div class="404-page">
+  <div class="error-page wrap">
     <h1>
       <?php echo e(__('La page n’existe pas :/', 'sage')); ?>
 

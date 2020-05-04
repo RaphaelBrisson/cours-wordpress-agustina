@@ -4,7 +4,7 @@
   @include('partials.page-header')
 
   @if (!have_posts())
-  <div class="404-page">
+  <div class="error-page wrap">
     <h1>
       {{ __('La page n’existe pas :/', 'sage') }}
     </h1>

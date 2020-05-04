@@ -34,12 +34,14 @@ export default {
 				$(this).toggleClass('is-active');
 				$('.banner .nav').css('display', 'flex');
 				$('.banner .nav2').css('display', 'flex');
+				$('.banner .nav3').css('display', 'flex');
 			}
 			else
 			{
 				$(this).toggleClass('is-active');
 				$('.banner .nav').css('display', 'none');
 				$('.banner .nav2').css('display', 'none');
+				$('.banner .nav3').css('display', 'none');
 			}
 		});
 
@@ -55,6 +57,12 @@ export default {
 			{
 				$('.hamburger').removeClass('is-active');
 				$('.banner .nav2').css('display', 'none');
+			});
+
+			$('.banner .nav3 a').click(function()
+			{
+				$('.hamburger').removeClass('is-active');
+				$('.banner .nav3').css('display', 'none');
 			});
 		}
 

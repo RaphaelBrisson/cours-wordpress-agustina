@@ -1,0 +1,56 @@
+div.error-page
+{
+	display: flex;
+	flex-direction: column;
+	padding-top: 120px;
+	padding-bottom: 80px;
+
+	h1
+	{
+		padding-bottom: 120px;
+	}
+
+	a
+	{
+		text-align: center;
+		font-size: 20px;
+		border: 1px solid $red;
+		border-radius: 5px;
+		padding: 5px;
+		width: 20%;
+		margin: auto;
+	}
+}
+
+@media all and (max-width: 980px)
+{
+	div.error-page
+	{
+		a
+		{
+			width: 30%;
+		}
+	}
+}
+
+@media all and (max-width: 768px)
+{
+	div.error-page
+	{
+		a
+		{
+			width: 40%;
+		}
+	}
+}
+
+@media all and (max-width: 480px)
+{
+	div.error-page
+	{
+		a
+		{
+			width: 50%;
+		}
+	}
+}

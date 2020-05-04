@@ -1,12 +1,12 @@
-.banner .nav li, .banner .nav2 li {
+.banner .nav li, .banner .nav2 li, .banner .nav3 li {
   @extend .nav-item;
 }
 
-.banner .nav a, .banner .nav2 a {
+.banner .nav a, .banner .nav2 a, .banner .nav3 a {
   @extend .nav-link;
 }
 
-.nav2 {
+.nav2, .nav3 {
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -49,7 +49,7 @@ list-style: none;
 	}
 }
 
-.banner .nav a, .banner .nav2 a
+.banner .nav a, .banner .nav2 a, .banner .nav3 a
 {
 	padding-left: 0;
 	padding-right: 0;
@@ -91,7 +91,7 @@ list-style: none;
 		min-height: 50px;
 	}
 
-	.banner .nav, .banner .nav2
+	.banner .nav, .banner .nav2, .banner .nav3
 	{
 		display: none;
 		padding-top: 50px;
@@ -106,7 +106,7 @@ list-style: none;
 
 @media all and (max-width: 600px)
 {
-	.banner .nav, .banner .nav2
+	.banner .nav, .banner .nav2, .banner .nav3
 	{
 		display: none;
 		text-align: center;
