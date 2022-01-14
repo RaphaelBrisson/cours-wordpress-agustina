@@ -1,31 +1,30 @@
-<footer id="contact" class="wrap">
-    <div class="h2">
-      <h2>Nous contacter</h2>
-      <span></span>
-    </div>
-    <p>Que vous ayez une question sur un événement, une potentielle inscription, n'hésitez pas à nous écrire !</p>
-    <div class="contact-data">
-      <div>
-        <div>
-          <img src="@asset('images/mail.png')" width="31" alt="mail">
-          <img src="@asset('images/phone.png')" width="28" alt="phone">
-          <img src="@asset('images/position.png')" width="24" alt="gps_position">
+<footer id="footer">
+  <div class="wrap">
+    <div class="footerContent">
+      <div class="footerContact">
+        <h3>Nous contacter</h3>
+        <p class="footerText">Que vous ayez une question sur un événement, une potentielle inscription, n'hésitez pas à nous écrire !</p>
+        <div class="footerContactItem">
+          <img src="@asset('images/mail.png')" width="18" alt="mail">
+          <p><a href="mailto:<?php echo antispambot(get_field('footerMail', 'option')); ?>"><?php echo antispambot(get_field('footerMail', 'option')); ?></a></p>
         </div>
-        <div>
-          <p><a href="mailto:lesvauriens@yahoo.fr">lesvauriens@yahoo.fr</a></p>
-          <p><a href="tel:0607597861">06 07 59 78 61</a></p>
-          <p>01150, Vaux-en-Bugey</p>
+        <div class="footerContactItem">
+          <img src="@asset('images/phone.png')" width="18" alt="phone">
+          <p></p>
+          <div><a href="tel:<?php echo str_replace(' ', '', get_field('footerPhone', 'option')); ?>"><?php echo get_field('footerPhone', 'option'); ?></a></div>
+        </div>
+        <div class="footerContactItem">
+          <img src="@asset('images/position.png')" width="18" alt="gps_position">
+          <div><?php echo get_field('footerAddress', 'option'); ?></div>
         </div>
       </div>
-      <div>
-        <p>Le bureau</p>
-        <p><strong>Président</strong> : Thierry Gruel</p>
-        <p><strong>Vices président(e)s</strong> : Philippe Tisssot-Guerraz – Carole Ravier – Laurence Bardet</p>
-        <p><strong>Secrétaire</strong> : Valéry Leignier</p>
-        <p><strong>Secrétaires adjoint(e)s</strong> : Myriam Chanet – Jean Fresnois</p>
-        <p><strong>Trésorier</strong> : Philippe BRISSON</p>
-        <p><strong>Trésorière adjointe</strong> : Nathalie TISSOT-GUERRAZ</p>
+      <div class="footerBureau">
+        <h3 class="footerBureauTitle">Le bureau</h3>
+        <div><?php echo get_field('footerBureau', 'option'); ?></div>
       </div>
     </div>
-    <p>Les Vauriens ©2020</p>
+    <span class="footerCopyright">Les Vauriens ©<?php echo date('Y') ?></span>
+  </div>
+
+  <?php edit_post_link( 'Modifier', '', '', 0, 'editLink');  ?>
 </footer>

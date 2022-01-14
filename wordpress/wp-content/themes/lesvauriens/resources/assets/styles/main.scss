@@ -1,7 +1,7 @@
 @import "common/variables";
 
 /** Import everything from autoload */
-@import "./autoload/**/*";
+@import "autoload/bootstrap";
 @import "autoload/hamburgers";
 /**
  * Import npm dependencies
@@ -15,8 +15,8 @@
 @import "common/global";
 @import "common/typography";
 
+@import "components/wp_blocks";
 @import "components/buttons";
-// @import "components/comments";
 @import "components/forms";
 @import "components/menu";
 @import "components/wp-classes";
@@ -31,7 +31,6 @@
 @import "layouts/tinymce";
 @import "layouts/error-page";
 @import "layouts/single-post/single-post";
-
 
 // A enlever (mis car probleme avec ACF)
 .js .postbox .handlediv

@@ -20,16 +20,13 @@ export default {
 	        window.location.hash = -50 + hash;
 	      });
 	    }
-	  $('.h2 span').css('width', '0%');
-	  $('.h2 span').animate({'width':'100%'}, 1000);
-
 	  });
 	},
 
 	responsiveMenu () {
-		$('.hamburger').click(function() 
+		$('.hamburger').click(function()
 		{
-			if($(this).hasClass('is-active') == false) 
+			if($(this).hasClass('is-active') == false)
 			{
 				$(this).toggleClass('is-active');
 				$('.banner .nav').css('display', 'flex');
@@ -65,17 +62,6 @@ export default {
 				$('.banner .nav3').css('display', 'none');
 			});
 		}
-
-		// Menu 1
-		$('.nav-primary .nav li:nth-child(4)').after("<span>");
-		$('.nav-primary .nav li:nth-child(6) a').attr("target","_blank");
-		$('.nav-primary .nav li:nth-child(7) a').attr("target","_blank");
-
-		//Menu 2
-		$('.nav-primary .nav2 li:nth-child(1)').after("<span>");
-		$('.nav-primary .nav2 li:nth-child(4)').after("<span>");
-		$('.nav-primary .nav2 li:nth-child(6) a').attr("target","_blank");
-		$('.nav-primary .nav2 li:nth-child(7) a').attr("target","_blank");
 	},
 
 	finalize() {

@@ -1,0 +1,44 @@
+/**
+  * Created by IRIS Interactive
+  * User : IRIS Interactive
+*/
+
+/* Layout
+/ ================================================== */
+$container: 1200px;
+$article: 750px;
+$gutter: 40px;
+
+$header-height: 75px;
+
+$font-size: 16px;
+$line-height: 1.5;
+
+$m-section-top: 100px;
+$m-section-bottom: 100px;
+$m-section-top-small: 60px;
+$m-section-bottom-small: 60px;
+
+$m-text: 25px; // On <ul> and <p> in .article
+
+$m-block: 60px;
+$m-block-small: 40px;
+
+
+// Border screen
+$margin-large: 6%;
+$margin-medium: 60px;
+$margin-small: 30px;
+$margin-xsmall: 25px;
+
+$breakpoint-large: 1300px;
+$breakpoint-medium: 1000px;
+$breakpoint-small: 650px;
+$breakpoint-xsmall: 390px;
+
+
+/* Color
+/ ================================================== */
+$red: #c73442;
+$black: #222;
+$white: #FAFAFA;

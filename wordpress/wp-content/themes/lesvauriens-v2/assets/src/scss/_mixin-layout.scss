@@ -1,0 +1,182 @@
+/**
+ * Created by IRIS Interactive
+ * User : IRIS Interactive
+*/
+
+/* Main gutter
+/ ================================================== */
+$viewport-borders: (
+    "large": $margin-large,
+    "medium": $margin-medium,
+    "small": $margin-small,
+    "xsmall": $margin-xsmall,
+);
+
+@function viewport-border($index) {
+    @return map_get($viewport-borders, $index);
+}
+
+
+/*  Margin block
+/* ============================================= */
+@mixin m-block() {
+
+    @include breakpoint(desktop) {
+        margin: {
+            top: $m-block;
+            bottom: $m-block;
+        }
+    }
+
+    @include breakpoint(large) {
+        margin: {
+            top: vw-size($m-block-large);
+            bottom: vw-size($m-block-large);
+        }
+    }
+
+    @include breakpoint(medium) {
+        margin: {
+            top: $m-block-medium;
+            bottom: $m-block-medium;
+        }
+    }
+
+    @include breakpoint(small) {
+        margin: {
+            top: $m-block-small;
+            bottom: $m-block-small;
+        }
+    }
+
+    @include breakpoint(xsmall) {
+        margin: {
+            top: $m-block-xsmall;
+            bottom: $m-block-xsmall;
+        }
+    }
+}
+
+
+/* Breakpoints
+/* ============================================= */
+$breakpoints: (
+    "xlarge": ceil($container/(1-((map_get($viewport-borders, "large")/100%) * 2))),
+    "large": $breakpoint-large,
+    "medium": $breakpoint-medium,
+    "small": $breakpoint-small,
+    "xsmall": $breakpoint-xsmall
+);
+
+@mixin breakpoint($point) {
+
+    @if $point == "xlarge" {
+        @media screen and (min-width: map_get($breakpoints, "xlarge")+1) {
+            @content;
+        }
+    } @else if $point == "large" {
+        @media screen and (max-width: map_get($breakpoints, "large")) {
+            @content;
+        }
+    } @else if $point == "medium" {
+        @media screen and (max-width: map_get($breakpoints, "medium")) {
+            @content;
+        }
+    } @else if $point == "small" {
+        @media screen and (max-width: map_get($breakpoints, "small")) {
+            @content;
+        }
+    } @else if $point == "xsmall" {
+        @media screen and (max-width: map_get($breakpoints, "xsmall")) {
+            @content;
+        }
+    } @else if $point == "desktop" {
+        @media screen and (min-width: (map-get($breakpoints, "medium")+1)) {
+            @content;
+        }
+    } @else {
+        @media screen and (max-width: $point) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpointmin($point) {
+
+    @if $point == "large" {
+        @media screen and (min-width: map_get($breakpoints, "large")+1) {
+            @content;
+        }
+    } @else if $point == "medium" {
+        @media screen and (min-width: map_get($breakpoints, "medium")+1) {
+            @content;
+        }
+    } @else if $point == "small" {
+        @media screen and (min-width: map_get($breakpoints, "small")+1) {
+            @content;
+        }
+    } @else if $point == "xsmall" {
+        @media screen and (min-width: map_get($breakpoints, "xsmall")+1) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $point+1) {
+            @content;
+        }
+    }
+}
+
+/* Grille
+/* ============================================= */
+@mixin grid-item($width, $nbelements, $gutter, $marginbottom : true) {
+    width: calc(#{$width} * 100% - (#{$gutter} * ((#{$nbelements} - 1) / #{$nbelements})));
+    float: left;
+    margin: {
+        left: calc(#{$gutter} / 2);
+        right: calc(#{$gutter} / 2);
+    }
+
+    &:nth-of-type(n) {
+        margin-right: #{$gutter};
+        margin-left: 0;
+        clear: none;
+    }
+
+    &:nth-of-type(#{$nbelements}n) {
+        margin-right: 0;
+    }
+
+    &:nth-of-type(#{$nbelements}n+1) {
+        clear: both;
+    }
+
+    @if $marginbottom == true {
+        margin-bottom: #{$gutter};
+    } @else {
+        margin-bottom: 0;
+    }
+}
+
+/* Font size
+/* ============================================= */
+@function rem-size( $size ) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@function vw-size( $size ) {
+    @return $size * 100 / ceil($container/(1-((map_get($viewport-borders, "large")/100%) * 2))) * 1vw;
+}
+
+
+/* Hover
+/* ============================================= */
+@mixin hover {
+
+    .no-touchevents & {
+
+        &:hover {
+            @content;
+        }
+    }
+}

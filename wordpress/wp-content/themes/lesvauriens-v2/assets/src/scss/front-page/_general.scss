@@ -1,0 +1,16 @@
+.home section {
+    padding: 100px 0;
+
+    @include breakpoint(small) {
+        padding: 60px 0;
+    }
+}
+
+.strateButton {
+    text-align: center;
+}
+
+.home main#main {
+    padding-top: $header-height;
+    padding-bottom: 0;
+}

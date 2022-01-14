@@ -1,0 +1,27 @@
+@import "lib/reset.css";
+@import "~@fancyapps/ui/dist/fancybox.css";
+
+@import "variables";
+@import "mixin-layout";
+@import "grid";
+@import "utils";
+
+@import "components/typography";
+@import "components/header";
+@import "components/posts";
+@import "components/wordpress-various";
+@import "components/gallery";
+@import "components/table";
+@import "components/footer";
+
+@import "front-page/general";
+@import "front-page/home_presentation";
+@import "front-page/actualites";
+@import "front-page/cta";
+@import "front-page/evenements";
+
+/* General */
+
+#wpadminbar {
+	display: none;
+}

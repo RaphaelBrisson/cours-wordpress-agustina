@@ -1,11 +1,12 @@
 <header class="banner">
-  <div class="container">
-    <nav class="nav-primary wrap2">
+  <nav class="nav-primary">
+    <div class="wrap">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
-    </nav>
-  </div>
+    </div>
+  </nav>
+
   <button class="hamburger hamburger--spin" type="button">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>

@@ -1,5 +1,5 @@
 /** Search form */
-.search-form 
+.search-form
 {
 	padding-bottom: 100px;
 	padding-top: 20px;
@@ -13,8 +13,8 @@
 
 	input[type="search"]
 	{
-		border: 1px solid $dark-blue;
-		color: $dark-blue;
+		border: 1px solid $black;
+		color: $black;
 		width: 30%;
 	}
 
@@ -29,7 +29,7 @@
 
 @media all and (max-width: 768px)
 {
-	.search-form 
+	.search-form
 	{
 	    width: 100%;
 	    margin: auto;
@@ -50,7 +50,7 @@
 
 @media all and (max-width: 480px)
 {
-	.search-form 
+	.search-form
 	{
 		flex-direction: column;
 

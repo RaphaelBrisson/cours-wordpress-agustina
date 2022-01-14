@@ -1,0 +1,78 @@
+#footer {
+    padding: 80px 0 40px;
+    background: $black;
+
+    h2 {
+        margin-bottom: 60px;
+    }
+
+    * {
+        color: $white;
+    }
+
+    & > p:last-of-type {
+        text-align: center;
+        font-size: rem-size(10px);
+        padding-top: 100px;
+    }
+
+    h3 {
+        margin-bottom: 30px;
+    }
+
+    .footerText {
+        margin-bottom: 30px;
+    }
+
+    .footerContent {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .footerContact {
+        width: 50%;
+        padding-right: 80px;
+        display: flex;
+        flex-direction: column;
+
+        &Item {
+            display: flex;
+            margin-bottom: 30px;
+
+            img {
+                margin-right: 20px;
+                object-fit: contain;
+            }
+        }
+
+        @include breakpoint(small) {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    .footerBureau {
+        width: 50%;
+        padding-right: 80px;
+
+        @include breakpoint(small) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+
+    .footerCopyright {
+        font-size: rem-size(12px);
+        text-align: center;
+        display: block;
+    }
+}
+
+.editLink {
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    left: 20px;
+}

@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
 <!--   @include('partials.page-header') -->
@@ -8,13 +8,13 @@
       {{ __('Aucun résultat trouvé :(', 'sage') }}
     </div>
   @endif
-  
+
   <section id="all-posts" class="wrap">
-    
+
     <div class="h2">
       <h1>Résultats pour : <?= $_GET["s"] ?></h1>
     </div>
-  
+
     <?= get_search_form() ?>
 
     <div class="articles-container">

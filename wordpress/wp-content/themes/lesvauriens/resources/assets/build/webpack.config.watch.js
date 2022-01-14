@@ -29,7 +29,7 @@ module.exports = {
     new BrowserSyncPlugin({
       target,
       open: config.open,
-      proxyUrl: config.proxyUrl,
+      //proxyUrl: config.proxyUrl,
       watch: config.watch,
       delay: 500,
     }),

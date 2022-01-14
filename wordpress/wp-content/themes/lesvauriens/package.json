@@ -27,6 +27,7 @@
     "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js",
     "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
     "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
+    "starttt": "webpack --hide-modules --progress --watch --config resources/assets/build/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",

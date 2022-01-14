@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
 <!--   @include('partials.page-header') -->
@@ -23,7 +23,7 @@
         <div>
           <h3 class="entry-title"><a href="{{ get_permalink($post->ID) }}">{{ get_field('titre_article', $post->ID) }}</a></h3>
           <div class="entry-summary">
-            <p><strong>Le {{ get_field('date_sujet_article', $post->ID) }}</strong> - 
+            <p><strong>Le {{ get_field('date_sujet_article', $post->ID) }}</strong> -
             {{ get_the_excerpt($post->ID) }}</p>
           </div>
         </div>

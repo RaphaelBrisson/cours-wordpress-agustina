@@ -1,0 +1,67 @@
+{
+    "key": "group_5e8589fb9790d",
+    "title": "Front Page",
+    "fields": [
+        {
+            "key": "field_5e85910430cdb",
+            "label": "Description page d'accueil",
+            "name": "homepageText",
+            "type": "textarea",
+            "instructions": "Le texte de description de l'association (dans le haut de page)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_61ce163840fa3",
+            "label": "Image de la bannière",
+            "name": "homepageImg",
+            "type": "image",
+            "instructions": "Taille max : 1Mo",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 1200,
+            "min_height": 400,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 1,
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "42"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Les entrées servent à écrire le contenu de la page d'accueil",
+    "modified": 1641069443
+}

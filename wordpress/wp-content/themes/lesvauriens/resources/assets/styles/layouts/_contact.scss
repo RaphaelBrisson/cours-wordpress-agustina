@@ -1,21 +1,16 @@
-#contact
+#footer
 {
-	padding-bottom: 0;
-	background: $red;
-	padding-bottom: 30px;
+  padding: 80px 0 40px;
+	background: $black;
 
-	*
-	{
+  h2 {
+    margin-bottom: 60px;
+  }
+
+	* {
 		color: $white;
 	}
 
-	&>p:first-of-type
-	{
-		text-align: center;
-		width: 50%;
-		margin: auto;
-	}
-	
 	&>p:last-of-type
 	{
 		text-align: center;
@@ -23,81 +18,48 @@
 		padding-top: 100px;
 	}
 
-	.h2
-	{
-		h2
-		{
-			background: $red;
-			color: $white;
-		}
+  h3 {
+    margin-bottom: 30px;
+  }
 
-		span
-		{
-			background: $white;
-		}
-	}
-	
-	.contact-data
+  .footerText {
+    margin-bottom: 30px;
+  }
+
+	.footerContent
 	{
-		width: 80%;
-		margin: auto;
 		display: flex;
-		justify-content: space-between;
-		padding-top: 60px;
-
-		&>div:first-of-type
-		{
-			width: 40%;
-			display: flex;
-
-			div
-			{
-				display: flex;
-				flex-direction: column;
-
-				p
-				{
-					font-weight: $bold;
-					font-size: 16px;
-				}
-			}
-
-			div:first-of-type
-			{
-				width: 8%;
-				margin-right: 20px;
-				justify-content: space-between;
-			}
-
-			div:last-of-type
-			{
-				width: 92%;
-				justify-content: space-between;
-			}
-		}
-		
-		&>div:last-of-type
-		{
-			width: 40%;
-
-			p
-			{
-				font-size: 11pt;
-			}
-
-			p:first-of-type
-			{
-				font-size: 14pt;
-				font-weight: $bold;
-				padding-bottom: 20px;
-			}
-
-			strong
-			{
-				font-weight: $bold;
-			}
-		}
+		flex-wrap: wrap;
+    margin-bottom: 40px;
 	}
+
+  .footerContact {
+    width: 50%;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+
+    &Item {
+      display: flex;
+      margin-bottom: 30px;
+
+      img {
+        margin-right: 20px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .footerBureau {
+    width: 50%;
+    padding-right: 80px;
+  }
+
+  .footerCopyright {
+    font-size: 11px;
+    text-align: center;
+    display: block;
+  }
 }
 
 
@@ -105,21 +67,15 @@
 
 @media all and (max-width: 768px)
 {
-	#contact
-	{
-		&>p:first-of-type
-		{
-			width: 80%;
-		}
-	}
+
 }
 
 
 @media all and (max-width: 480px)
 {
-	#contact
-	{	
-		.contact-data
+	#footer
+	{
+		.footerContent
 		{
 			flex-direction: column;
 
@@ -134,7 +90,7 @@
 					padding-bottom: 30px;
 				}
 			}
-			
+
 			&>div:last-of-type
 			{
 				padding-top: 60px;
@@ -147,11 +103,22 @@
 
 @media all and (max-width: 320px)
 {
-	#contact
+	#footer
 	{
 		&>p:first-of-type
 		{
 			width: 80%;
 		}
 	}
+}
+
+.editLink {
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  left: 20px;
+  background: $red;
+  color: $white;
+  padding: 10px 30px;
+  font-weight: 600;
 }

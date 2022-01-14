@@ -1,50 +1,40 @@
-.banner .nav li, .banner .nav2 li, .banner .nav3 li {
+.banner .nav li {
   @extend .nav-item;
 }
 
-.banner .nav a, .banner .nav2 a, .banner .nav3 a {
+.banner .nav a {
   @extend .nav-link;
 }
 
-.nav2, .nav3 {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--ms-flex-wrap: wrap;
-flex-wrap: wrap;
-padding-left: 0;
-margin-bottom: 0;
-list-style: none;
-}
-
-.nav-primary
-{
+.nav-primary {
 	position: fixed;
 	z-index: 1000;
 	width: 100%;
 	background: $white;
-	box-shadow: 0px 2px 15px #0000001C;
 	padding-bottom: 10px;
-	padding-top: 4px;
+	padding-top: 10px;
+  box-shadow: 0 2px 15px #0000001C;
 
-	div ul
-	{
+	div ul {
 		width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 
-		li a
-		{
-			color: $dark-blue;
-		}
+		li {
+      margin: 0 15px;
+
+      a {
+        color: $black;
+      }
+    }
 
 		span
 		{
 			display: block;
 			width: 1px;
 		    height: 25px;
-		    background: $dark-blue;
+		    background: $black;
 		}
 	}
 }
@@ -65,7 +55,7 @@ list-style: none;
 		z-index: 1000;
 		top: 7px;
 		left: 30px;
-		width: 60px;
+		width: 75px;
 	}
 }
 

@@ -11,13 +11,6 @@ section.single-post
     		justify-content: space-between;
     		align-items: center;
 
-    		h1
-    		{
-    			font-weight: 500;
-    			font-size: 60px;
-    			width: 80%;
-    		}
-
     		p
     		{
     			width: 20%;
@@ -75,12 +68,6 @@ section.single-post
 	    	{
 				flex-direction: column;
 
-				h1
-				{
-					width: 100%;
-					text-align: center;
-				}
-
 				p
 				{
 					padding-top: 50px;
@@ -109,11 +96,6 @@ section.single-post
 	    		display: flex;
 	    		justify-content: space-between;
 	    		align-items: center;
-
-	    		h1
-	    		{
-	    			font-size: 50px;
-	    		}
 	    	}
 	    }
 	}

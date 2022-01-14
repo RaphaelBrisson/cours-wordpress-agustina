@@ -1,0 +1,32 @@
+.pagination {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+
+    a,
+    span {
+        padding: 10px;
+    }
+}
+
+time.updated {
+    margin-top: 10px;
+    display: block;
+}
+
+.wp-block-image img {
+    object-fit: cover;
+}
+
+figcaption  {
+    text-align: center;
+    font-size: rem-size(12px) !important;
+}
+
+.wp-block-embed iframe {
+    width: 100%;
+}
+
+.is-provider-youtube iframe {
+    height: 473px;
+}

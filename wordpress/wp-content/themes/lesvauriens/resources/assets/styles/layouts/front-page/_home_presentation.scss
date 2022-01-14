@@ -1,89 +1,86 @@
-#home_presentation
+#homeBanner
 {
-	background-image: url('../images/photo_groupe.png');
+  position: relative;
 	background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-	&>div
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    pointer-events: none;
+  }
+
+  &:before {
+    top: 0;
+    background: linear-gradient(0deg, rgba(#000, 0) 0%, rgba(#000, 0.7) 100%);
+    height: 30%;
+  }
+
+  &:after {
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(#000, 0) 0%, rgba(#000, 0.8) 100%);
+    height: 70%;
+  }
+
+  h1 {
+    color: $white;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+
+	.wrap
 	{
-		padding-top: 120px;
+		padding-top: 140px;
 		display: flex;
 		flex-direction: column;
 		position: relative;
 
-		h1
-		{
-			font-weight: 500;
-			font-size: 60px;
-			text-align: center;
-		}
+		.homeBannerText {
+      text-align: center;
+      color: $white;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+    }
 
-		p
-		{
-			font-weight: $bold;
-			font-size: 15px;
-		}
+    .homeBannerSlogan {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
 
-		.slogan
-		{
-			font-size: 36px;
-			letter-spacing: 1.5px;
-			font-family: 'Alegreya SC', serif;
-			padding-bottom: 30px;
-		}
-
-		p:last-of-type
-		{
-			padding-bottom: 80px;
-		}
-
-		img
-		{
+		.homeBannerLogo {
 			width: 300px;
 			margin: auto;
 			padding: 60px 0;
+      position: relative;
+      z-index: 10;
 		}
 
-		svg
-		{
+		.homeBannerScrolldown {
 			position: absolute;
 			left: 0;
 			right: 0;
 			margin: auto;
 			bottom: 0;
+      z-index: 10;
+      width: 20px;
 		}
 	}
-	
+
 }
-
-.red_triangle
-{
-	position: absolute;
-	top: -45px;
-	left: 0;
-	width: 100%;
-}
-
-
 
 @media all and (max-width: 1170px)
 {
 
 }
-@media all and (max-width: 980px)
-{
-	#home_presentation
-	{
-		&>div
-		{
-			.slogan
-			{
-				text-align: center;
-			}
-		}
-	}
-}
+
 
 @media all and (max-width: 768px)
 {
@@ -98,19 +95,10 @@
 
 		&>div
 		{
-			h1
-			{
-				font-size: 50px;
-			}
 
 			img
 			{
 				width: 250px;
-			}
-
-			.slogan
-			{
-				text-align: center;
 			}
 		}
 	}
@@ -119,4 +107,15 @@
 @media all and (max-width: 320px)
 {
 
+}
+
+
+#call-to-action-archive {
+  background-color: $red;
+  padding: 140px 0;
+  text-align: center;
+
+  a {
+    color: $white;
+  }
 }

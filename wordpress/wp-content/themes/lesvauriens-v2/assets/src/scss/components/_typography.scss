@@ -1,0 +1,171 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $black;
+    line-height: $line-height;
+    font-size: rem-size($font-size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    line-height: 1;
+    color: $red;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: rem-size(60px);
+    margin-bottom: 60px;
+
+    @include breakpoint(medium) {
+        font-size: rem-size(56px);
+    }
+
+    @include breakpoint(small) {
+        font-size: rem-size(46px);
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(xsmall) {
+        font-size: rem-size(40px);
+    }
+}
+
+h2 {
+    font-size: rem-size(44px);
+    margin-bottom: 60px;
+
+    @include breakpoint(medium) {
+        font-size: rem-size(36px);
+    }
+
+    @include breakpoint(small) {
+        font-size: rem-size(30px);
+        margin-bottom: 30px;
+    }
+
+    @include breakpoint(xsmall) {
+        font-size: rem-size(26px);
+    }
+}
+
+h3 {
+    font-size: rem-size(22px);
+    font-weight: 700;
+    color: $red;
+
+    @include breakpoint(small) {
+        font-size: rem-size(20px);
+    }
+
+    @include breakpoint(xsmall) {
+        font-size: rem-size(18px);
+    }
+}
+
+a {
+    color: $red;
+    transition: all 0.2s;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+        color: $black;
+    }
+}
+
+.button,
+.wp-block-button__link {
+    border-radius: 0;
+    display: inline-flex;
+    width: auto;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: rem-size(16px);
+    background: $black;
+    color: #fff;
+    line-height: 1;
+    font-weight: 600;
+    border: none;
+    height: 45px;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        background: $red;
+    }
+}
+
+.article {
+
+    ul,
+    ol {
+        margin-bottom: $m-text;
+    }
+
+    ul {
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+
+        > li {
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 9px;
+                height: 7px;
+                width: 7px;
+                border-radius: 50%;
+                background: $red;
+            }
+        }
+
+        ul,
+        ol {
+            margin-top: 10px;
+        }
+    }
+
+    ol {
+        padding-left: 15px;
+
+        li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+
+            &::marker {
+                font-size: rem-size(14px);
+                color: $red;
+                font-weight: 800;
+            }
+        }
+
+        > li {
+            list-style-type: decimal;
+        }
+
+        ul {
+
+            > li {
+                padding-left: 25px;
+            }
+        }
+
+        ul,
+        ol {
+            margin-top: 10px;
+        }
+    }
+}

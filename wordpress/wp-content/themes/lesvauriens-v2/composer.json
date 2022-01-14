@@ -1,0 +1,32 @@
+{
+  "name": "les-vauriens",
+  "type": "wordpress-site",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "Raphael BRISSON"
+    }
+  ],
+  "config": {
+    "vendor-dir": "composer_vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "LesVauriensTheme\\": "lesvauriens-v2/"
+    }
+  },
+  "optimize-autoloader": true,
+  "minimum-stability": "stable",
+  "require-dev": {
+    "phpdocumentor/phpdocumentor": "2.*",
+    "squizlabs/php_codesniffer": "^3.5",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+  },
+  "require": {
+    "symfony/var-dumper": "^3.1",
+    "symfony/yaml": "^3.3",
+    "mobiledetect/mobiledetectlib": "^2.8",
+    "jawira/case-converter": "^3.4",
+    "wyrihaximus/html-compress": "^3.0"
+  }
+}

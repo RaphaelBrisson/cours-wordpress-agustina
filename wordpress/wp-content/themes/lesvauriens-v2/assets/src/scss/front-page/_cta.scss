@@ -1,0 +1,25 @@
+#call-to-action-archive {
+    background-color: $red;
+    padding: 140px 0;
+    text-align: center;
+
+    @include breakpoint(medium) {
+        padding: 100px 0;
+    }
+
+    @include breakpoint(small) {
+        padding: 60px 0;
+    }
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+}
