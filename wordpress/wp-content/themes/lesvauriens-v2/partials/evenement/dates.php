@@ -5,7 +5,7 @@ $fin = get_field('evenementFin');
 
 if ( $debut === $fin ) : ?>
 <?php setlocale(LC_TIME, "fr_FR"); ?>
-	<div class="evenementDate">Le <?php echo strftime( '%d %B %Y', strtotime($fin) ); ?>
+	<div class="evenementDate">Le <?php echo utf8_encode(strftime( '%d %B %Y', strtotime($fin) )); ?>
 <?php else : ?>
 	<div class="evenementDate"><?php echo 'Du ' . strftime( '%d %B %Y', strtotime($debut) ) . ' au ' . strftime( '%d %B %Y', strtotime($fin) ); ?>
 <?php endif; ?>
