@@ -48,8 +48,9 @@
 			'post_type'           => array(
 				'evenement',
 			),
-			'order'               => 'ASC',
-			'orderby'             => 'evenementDebut',
+			'meta_key'       => 'evenementDebut',
+            'orderby'        => 'meta_value_num',
+            'order'          => 'DESC',
 			'meta_query' => array(
 				array(
 					'key'     => 'evenementFin',
